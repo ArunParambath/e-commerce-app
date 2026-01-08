@@ -5,6 +5,8 @@ import './HomePage.css';
 
 
 export function HomePage() {
+   fetch('')
+   
     return (
         <>
             <Header />
