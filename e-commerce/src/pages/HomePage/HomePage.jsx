@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { formatMoney } from '../../utils/money';
 import { useEffect, useState } from 'react';
 import { Header } from '../../components/Header';
 import CheckmarkIcon from '../../assets/images/icons/checkmark.png';
@@ -46,7 +47,7 @@ export function HomePage({ cart }) {
                                 </div>
 
                                 <div className="product-price">
-                                    RS {product.priceCents}
+                                    {formatMoney(product.priceCents)}
                                 </div>
 
                                 <div className="product-quantity-container">
