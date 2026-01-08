@@ -6,19 +6,27 @@ import './HomePage.css';
 
 
 export function HomePage() {
+
     const [products, setProducts] = useState([]);
+    const [Cart, setCart] = useState([]);
     useEffect(() => {
         axios.get('http://localhost:3000/api/products')
             .then(response => {
                 setProducts(response.data);
             });
+
+        axios.get('http://localhost:3000/api/cart-items')
+            .then(response => {
+                console.log(response.data);
+            });
+
     }, []);
 
 
 
     return (
         <>
-            <Header />
+            <Header cart={Cart} />
             <title>E-Commerce</title>
             <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
             <div className="home-page">
