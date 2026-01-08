@@ -1,10 +1,11 @@
-import './header.css'
+import { Header } from '../../components/Header';
 import './OrderPage.css'
 
 export function OrderPage() {
     return (
         <>
-            <title>Checkout</title>
+         <Header />
+            <title>Orders</title>
 
             <div className="header">
                 <div className="left-section">
