@@ -6,9 +6,9 @@ import './OrderPage.css'
 export function OrderPage() {
     return (
         <>
-         <Header />
+            <Header />
             <title>Orders</title>
-            <link rel="icon" type="image/svg+xml" href="orders-favicon.png" />
+            <link rel="icon" type="image/svg+xml" to="orders-favicon.png" />
             <div className="header">
                 <div className="left-section">
                     <Link href="index.html" className="header-link">
@@ -28,12 +28,12 @@ export function OrderPage() {
                 </div>
 
                 <div className="right-section">
-                    <Link className="orders-link header-link" href="orders.html">
+                    <Link className="orders-link header-link" to="orders.html">
 
                         <span className="orders-text">Orders</span>
                     </Link>
 
-                    <Link className="cart-link header-link" href="checkout.html">
+                    <Link className="cart-link header-link" to="checkout.html">
                         <img className="cart-icon" src="images/icons/cart-icon.png" />
                         <div className="cart-quantity">3</div>
                         <div className="cart-text">Cart</div>
@@ -87,7 +87,7 @@ export function OrderPage() {
                             </div>
 
                             <div className="product-actions">
-                                <Link href="tracking.html">
+                                <Link to="tracking.html">
                                     <button className="track-package-button button-secondary">
                                         Track package
                                     </button>
@@ -115,7 +115,7 @@ export function OrderPage() {
                             </div>
 
                             <div className="product-actions">
-                                <Link href="tracking.html">
+                                <Link to="tracking.html">
                                     <button className="track-package-button button-secondary">
                                         Track package
                                     </button>
@@ -166,7 +166,7 @@ export function OrderPage() {
                             </div>
 
                             <div className="product-actions">
-                                <Link href="tracking.html">
+                                <Link to="tracking.html">
                                     <button className="track-package-button button-secondary">
                                         Track package
                                     </button>

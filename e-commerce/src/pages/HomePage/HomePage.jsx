@@ -5,30 +5,24 @@ import CheckmarkIcon from '../../assets/images/icons/checkmark.png';
 import './HomePage.css';
 
 
-export function HomePage() {
+export function HomePage({ cart }) {
 
     const [products, setProducts] = useState([]);
-    const [Cart, setCart] = useState([]);
+
     useEffect(() => {
         axios.get('/api/products')
             .then(response => {
                 setProducts(response.data);
             });
-
-        axios.get('/api/cart-items')
-            .then(response => {
-                console.log(response.data);
-            });
-
     }, []);
 
 
 
     return (
         <>
-            <Header cart={Cart} />
             <title>E-Commerce</title>
-            <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
+            <link rel="icon" type="image/svg+xml" to="home-favicon.png" />
+            <Header cart={cart} />
             <div className="home-page">
                 <div className="products-grid">
                     {products.map((product) => {
